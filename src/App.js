@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// section 1: importing the necessary components
+// import logo from './logo.svg';
+import CaptchaBox from "./components/captchaBox/CaptchaBox";
+import CustomButton from "./components/customButton/Button";
+import "./App.css";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex justify-center items-center bg-gray-50 min-h-screen py-8 px-4">
+      <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg">
+        <div className="flex flex-col items-center">
+          <CaptchaBox />
+        </div>
+
+        <div className="mt-4 flex justify-center">
+          <CustomButton text="Refer & Earn" className="  text-sm shadow-md" />
+        </div>
+
+        <div className="text-gray-600 text-sm mt-6 flex justify-center">
+          <ul className="list-none list-inside space-y-1 text-gray-400">
+            <li>*All words are case sensitive.</li>
+            <li>*Calculative Captchas must be solved.</li>
+            <li>*Length of Captcha will be between 6 to 12 characters.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
