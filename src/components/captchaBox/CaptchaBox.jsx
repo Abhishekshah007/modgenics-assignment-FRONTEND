@@ -23,7 +23,7 @@ const CaptchaBox = () => {
     }
   
     try {
-      const response = await axios.post("http://localhost:5000/api/captcha/getCaptcha", {
+      const response = await axios.post("https://modgenics-assignment-backend.onrender.com/api/captcha/getCaptcha", {
         fullname: name, 
       });
   
@@ -49,7 +49,7 @@ const CaptchaBox = () => {
   // section 5: defining the verifyCaptcha function
   const verifyCaptcha = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/captcha/verifyCaptcha", {
+      const response = await axios.post("https://modgenics-assignment-backend.onrender.com/api/captcha/verifyCaptcha", {
         fullname: name,
         inputValue
       });
@@ -77,7 +77,7 @@ const handlePayout = async () => {
     }
 
     console.log("Name sent for payout:", name);
-    const response = await axios.post("http://localhost:5000/api/razorpay/payout", { fullname: name });
+    const response = await axios.post("https://modgenics-assignment-backend.onrender.com/api/razorpay/payout", { fullname: name });
 
     if (response.data.success) {
       const { order } = response.data;
