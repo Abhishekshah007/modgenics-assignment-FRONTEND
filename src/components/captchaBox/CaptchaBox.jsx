@@ -152,7 +152,7 @@ const CaptchaBox = () => {
 
       {captchaVisible && (
         <>
-          <div className="flex justify-center items-center w-64 h-28 bg-white rounded-md border border-black shadow-md">
+          <div className="flex justify-center items-center w-64 h-28 bg-white rounded-md border border-black text-3xl shadow-md">
             <span className="text-lg font-mono font-bold text-gray-800">
               {captcha}
             </span>
